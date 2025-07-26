@@ -1,0 +1,106 @@
+import React from "react";
+import { motion } from "framer-motion";
+
+export default function PortfolioResume() {
+  return (
+    <div className="min-h-screen bg-white text-gray-800 font-sans px-6 py-10 max-w-5xl mx-auto">
+      <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-4xl font-bold text-center mb-2">
+        Abhay Pratap Singh
+      </motion.h1>
+      <p className="text-center text-sm text-gray-600 mb-4">
+        UP, India | +91 7300700183 | abhaysingh51296@gmail.com
+      </p>
+      <p className="text-center text-sm text-blue-600 underline mb-10">
+        <a href="https://linkedin.com/in/abhaysingh01" target="_blank">LinkedIn</a> | <a href="https://github.com/abhay-backend" target="_blank">GitHub</a>
+      </p>
+
+      <Section title="Professional Summary">
+        Vision-driven Senior Backend Engineer and Technical Lead with over 7 years of deep experience building scalable, fault-tolerant systems across OTT platforms, microservices architecture, and distributed applications. Passionate about leveraging AI to solve real-world business problems. Demonstrated expertise in building event-driven systems, cloud-first deployments, and leading high-performing engineering teams. Combines strong backend architecture skills with a deep understanding of data-driven AI tools, automation, and real-time processing pipelines.
+      </Section>
+
+      <Section title="Technical Skills">
+        <b>Languages:</b> Java (8 & 17), Python, SQL, Shell Scripting<br />
+        <b>Frameworks:</b> Spring Boot, Spring Security, JPA, WebFlux, Hibernate<br />
+        <b>Cloud Platforms:</b> AWS (EC2, Lambda, S3, RDS, MediaConvert, SNS, SQS), GCP<br />
+        <b>Databases:</b> MySQL, MongoDB, Cassandra, Redis, Elasticsearch<br />
+        <b>Messaging:</b> Kafka, RabbitMQ, AWS SQS<br />
+        <b>DevOps & Tools:</b> Docker, Kubernetes, Jenkins, Git, Maven, Postman, Terraform (basic)<br />
+        <b>Monitoring & Observability:</b> Prometheus, Grafana, CloudWatch, ELK Stack, OpenTelemetry<br />
+        <b>AI/ML Tools:</b> ChatGPT, Gemini, IBM Watson, OpenAI API, LangChain<br />
+        <b>Python Libraries:</b> Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, TensorFlow (basic)<br />
+        <b>Architecture:</b> Microservices, Serverless, REST APIs, Event-driven, Clean Architecture
+      </Section>
+
+      <Section title="Professional Experience">
+        <b>Technical Lead – Infinite Computer Solutions</b> (Oct 2023 – Present, UP, India)
+        <ul className="list-disc list-inside">
+          <li>Architected and deployed highly scalable backend systems for OTT ingestion, user management, and reconciliation using Spring Boot, Kafka, and AWS</li>
+          <li>Delivered serverless video transformation pipeline using AWS MediaConvert, S3, and EventBridge supporting HLS/DASH conversion</li>
+          <li>Led the implementation of a push notification engine using SNS + Cassandra serving multi-device delivery at scale</li>
+          <li>Built a Kafka + MySQL reconciliation system ensuring cross-system data consistency and integrity</li>
+          <li>Integrated OpenAI API with internal services for automated tagging and classification of content</li>
+        </ul>
+        <br />
+        <b>Associate Staff Engineer – Nagarro</b> (Oct 2021 – Oct 2023, Bangalore)
+        <ul className="list-disc list-inside">
+          <li>Modernized point-of-sale backend infrastructure using Java WebFlux and reactive streams</li>
+          <li>Reduced latency by 40% through API optimization, caching strategies, and asynchronous processing</li>
+          <li>Integrated advanced analytics and tracking modules using Prometheus + Grafana</li>
+          <li>Led DevOps migration and CI/CD enablement for multi-region deployment</li>
+        </ul>
+        <br />
+        <b>Software Engineer – MS Technology</b> (Mar 2018 – Oct 2021, Noida)
+        <ul className="list-disc list-inside">
+          <li>Built and enhanced high-fidelity HTML5 document viewer using Angular and Java backend</li>
+          <li>Engineered complex annotation, export, and rendering pipelines handling large-scale PDFs</li>
+          <li>Collaborated with cross-functional teams to enhance document indexing, searchability, and export control</li>
+        </ul>
+      </Section>
+
+      <Section title="AI & Data Science Readiness">
+        Strong understanding of core AI/ML concepts and experience integrating AI models into scalable backend applications. Hands-on with OpenAI’s ChatGPT APIs, Gemini, and LangChain for intelligent automation. Completed IBM’s Data Science Professional Certificate. Experienced with data wrangling, preprocessing, and analysis using Pandas, NumPy, and scikit-learn. Actively building AI-enhanced microservices and exploring AI agent integration into enterprise applications.
+      </Section>
+
+      <Section title="Certifications">
+        <ul className="list-disc list-inside">
+          <li>AWS Certified Solutions Architect – Associate (LinkedIn Learning)</li>
+          <li>IBM Data Science Professional Certificate (IBM Skills Network)</li>
+          <li>Advanced Cloud Solutions – Google Cloud Skill Boost</li>
+          <li>Microservices Foundations – LinkedIn Learning</li>
+          <li>Kubernetes for Developers – LinkedIn Learning</li>
+        </ul>
+      </Section>
+
+      <Section title="Leadership & Impact">
+        <ul className="list-disc list-inside">
+          <li>Led architecture, development, and production rollout of 3+ mission-critical microservices</li>
+          <li>Mentored junior engineers, conducted technical interviews, and facilitated code reviews</li>
+          <li>Worked closely with cross-functional stakeholders (QA, DevOps, Product) to ensure end-to-end delivery</li>
+          <li>Advocated for observability, resilience patterns, and cost-optimized cloud deployments</li>
+        </ul>
+      </Section>
+
+      <Section title="Projects & Contributions">
+        <ul className="list-disc list-inside">
+          <li><b>AI Auto-Tagger:</b> Integrated OpenAI API to auto-tag OTT content metadata for search and classification</li>
+          <li><b>Dynamic Notification System:</b> Built AWS SNS/Cassandra system handling 100K+ messages/day</li>
+          <li><b>Elastic Search Indexer:</b> Python + Spring Boot job to sync millions of records to Elasticsearch</li>
+          <li><b>Document Annotation Tool:</b> Angular + Java tool for secure export with/without layers</li>
+        </ul>
+      </Section>
+
+      <Section title="Education">
+        <b>B.Tech in Computer Science</b> – GLA University, Mathura (2018)
+      </Section>
+    </div>
+  );
+}
+
+function Section({ title, children }) {
+  return (
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }} className="mb-8">
+      <h2 className="text-xl font-semibold text-blue-700 mb-2">{title}</h2>
+      <div className="text-sm text-gray-700 leading-relaxed">{children}</div>
+    </motion.div>
+  );
+}
